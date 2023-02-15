@@ -1,0 +1,15 @@
+:root {
+    --orange: #fa980a;
+    --grey: #717172;
+    --greyer: #555556;
+    --greyest: #434344;
+    --light: #e5e5e5;
+}
+
+
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
