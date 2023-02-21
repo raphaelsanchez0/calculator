@@ -12,19 +12,19 @@ window.addEventListener("load", () => {
     const symbolBtns = document.querySelectorAll(".operator, .number")
 
 
-
+    console.log(("3.2").toString)
 
     let calculation = ""
 
     function addtoCalculation(symbol) {
-        calculation += str(symbol);
+        calculation += symbol.toString();
         textResult.innerHTML = calculation;
 
     }
 
     function evaluateCalculuation() {
         try {
-            calculation = str(eval(calculation))
+            calculation = Str(eval(calculation))
             textResult.innerHTML = calculation;
         } catch {
             clearField()
@@ -35,12 +35,10 @@ window.addEventListener("load", () => {
     function clearField() {
         calculation = ""
         textResult.innerHTML = calculation;
-    }
-
-    for (let i = 0; i < numBtns.length; i++) {
-        let selectedNum = numBtns[i].value;
         addtoCalculation(addtoCalculation)
     }
+
+
 
     symbolBtns.forEach(symbol => {
         symbol.addEventListener("click", () => {
