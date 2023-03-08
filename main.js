@@ -1,18 +1,16 @@
 window.addEventListener("load", () => {
-    const numBtns = document.querySelectorAll(".number");
-
-    const operatorBtns = document.querySelectorAll(".operator")
-    const addBtn = document.querySelector("#plus");
-    const subtractBtn = document.querySelector("#minus");
-    const multiplyBtn = document.querySelector("#multiply");
-    const divideBtn = document.querySelector("#divide");
+    
 
     const textResult = document.querySelector(".currentValue")
 
     const symbolBtns = document.querySelectorAll(".operator, .number")
+    const equalBtn = document.querySelector("#equal")
+
+    const clearBtn = document.querySelector("#c")
+
+    const currentOperations = document.querySelector(".currentOperations")
 
 
-    console.log(("3.2").toString)
 
     let calculation = ""
 
@@ -24,8 +22,11 @@ window.addEventListener("load", () => {
 
     function evaluateCalculuation() {
         try {
-            calculation = Str(eval(calculation))
+            let operations = calculation;
+            calculation = (eval(calculation)) + "";
             textResult.innerHTML = calculation;
+            currentOperations.innerHTML = operations;
+            
         } catch {
             clearField()
             textResult.innerHTML = "Error";
@@ -33,18 +34,28 @@ window.addEventListener("load", () => {
     }
 
     function clearField() {
-        calculation = ""
+        calculation = "";
         textResult.innerHTML = calculation;
-        addtoCalculation(addtoCalculation)
+        addtoCalculation(calculation)
     }
-
 
 
     symbolBtns.forEach(symbol => {
         symbol.addEventListener("click", () => {
             addtoCalculation(symbol.value)
+            textResult.innerHTML = calculation;
         })
-
     });
+
+
+    equalBtn.addEventListener("click", ()=>{
+        evaluateCalculuation();
+    })
+
+    clearBtn.addEventListener("click", ()=>{
+        clearField()
+    })
+
+    
 
 })

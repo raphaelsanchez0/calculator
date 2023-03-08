@@ -33,6 +33,14 @@ h1{
 .currentValue{
     color:var(--light);
     text-align: right;
+    padding: 1rem;
+}
+
+.currentOperations {
+    color:var(--light);
+    text-align: right;
+    padding: 1rem;  
+    font-size: 1rem;
 }
 
 .calculator{
@@ -87,7 +95,7 @@ h1{
 
 
 
-.arithmeticView{
+.currentOperations{
     grid-area: arithmeticView;
 }
 .currentValue{
