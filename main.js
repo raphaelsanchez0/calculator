@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    
+
 
     const textResult = document.querySelector(".currentValue")
 
@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
     const clearBtn = document.querySelector("#c")
 
     const currentOperations = document.querySelector(".currentOperations")
+
+    const plusMinus = document.querySelector("#plusminus")
 
 
 
@@ -26,7 +28,7 @@ window.addEventListener("load", () => {
             calculation = (eval(calculation)) + "";
             textResult.innerHTML = calculation;
             currentOperations.innerHTML = operations;
-            
+
         } catch {
             clearField()
             textResult.innerHTML = "Error";
@@ -36,7 +38,12 @@ window.addEventListener("load", () => {
     function clearField() {
         calculation = "";
         textResult.innerHTML = calculation;
+        currentOperations.innerHTML = "";
         addtoCalculation(calculation)
+    }
+
+    function negate(num) {
+        return -1 * num //negates number
     }
 
 
@@ -48,14 +55,18 @@ window.addEventListener("load", () => {
     });
 
 
-    equalBtn.addEventListener("click", ()=>{
+    equalBtn.addEventListener("click", () => {
         evaluateCalculuation();
     })
 
-    clearBtn.addEventListener("click", ()=>{
+    clearBtn.addEventListener("click", () => {
         clearField()
     })
 
-    
+    plusMinus.addEventListener("click", () => {
+        textResult.innerHTML = negate(textResult.innerHTML)
+    })
+
+
 
 })
