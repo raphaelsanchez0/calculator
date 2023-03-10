@@ -13,39 +13,32 @@
 </head>
 
 <body>
-    <header>
-        <h1>Calculator</h1>
-    </header>
-    <main>
-        <section class="calculator">
-            <div class="currentOperations"></div>
-            <div class="currentValue"></div>
-            <button type="button" value="C" id="c" class="button non-number">C</button>
-            <!-- <button type="button" id="plusminus" class="button non-number">+/-</button>
-            <button type="button" id="percentage" class="button non-number">%</button> -->
-            <button type="button" value="." id="point" class="button non-number">.</button>
-            <button type="button" value="/" id="divide" class="button operator">/</button>
-            <button type="button" value=7 id="seven" class="button number">7</button>
-            <button type="button" value=8 id="eight" class="button number">8</button>
-            <button type="button" value=9 id="nine" class="button number">9</button>
-            <button type="button" value="*" id="multiply" class="button operator">X</button>
-            <button type="button" value=4 id="four" class="button number">4</button>
-            <button type="button" value=5 id="five" class="button number">5</button>
-            <button type="button" value=6 id="six" class="button number">6</button>
-            <button type="button" value="-" id="minus" class="button operator">-</button>
-            <button type="button" value=1 id="one" class="button number">1</button>
-            <button type="button" value=2 id="two" class="button number">2</button>
-            <button type="button" value=3 id="three" class="button number">3</button>
-            <button type="button" value="+" id="plus" class="button operator">+</button>
-            <button type="button" value=0 id="zero" class="button number">0</button>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button class="span-two" data-equals>=</button>
 
-            <button type="button" id="equal" class="button operator">=</button>
+    </div>
 
-
-
-
-        </section>
-    </main>
     <script src="main.js"></script>
 </body>
 
