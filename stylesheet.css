@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
     font-weight: normal;
+    white-space: normal;
 }
 
 body {
@@ -52,14 +53,17 @@ goes from first two second column */
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    min-height: 7.5rem;
 }
 
 .output .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
+
 }
 
 .output .current-operand {
     color: white;
     font-size: 2.5rem;
+
 }
