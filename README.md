@@ -1,3 +1,3 @@
 ﻿# Calcualtor
-A simple calculator
+A simple calculator <br>
 ![Screenshot](img/calculatorscreenshot.PNG)
